@@ -78,4 +78,8 @@ public final class Complex {
 	public String toString() {
 		return "(" + re + " + " + im + "i)";
 	}
+	
+	public static void main(String[] args) {
+		
+	}
 }
