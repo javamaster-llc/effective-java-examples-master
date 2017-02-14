@@ -16,7 +16,6 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
 		super(initCap, loadFactor);
 	}
 
-	
 	@Override
 	public boolean add(E e) {
 		addCount++;
