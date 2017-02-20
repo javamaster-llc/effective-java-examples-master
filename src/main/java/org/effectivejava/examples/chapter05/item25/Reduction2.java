@@ -1,14 +1,16 @@
 // List-based generic reduction - Page 123
 package org.effectivejava.examples.chapter05.item25;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Reduction {
+public class Reduction2 {
 	static <E> E reduce(List<E> list, Function<E> f, E initVal) {
-		@SuppressWarnings("unchecked")
-		E[] snapshot = (E[]) list.toArray();
-		
+		List<E> snapshot;
+		synchronized (list) {
+			snapshot = new ArrayList<E>(list);
+		}
 		E result = initVal;
 		for (E e : snapshot)
 			result = f.apply(result, e);

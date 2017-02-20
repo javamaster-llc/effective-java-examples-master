@@ -28,7 +28,7 @@ public class Favorites {
 		String favoriteString = f.getFavorite(String.class);
 		int favoriteInteger = f.getFavorite(Integer.class);
 		Class<?> favoriteClass = f.getFavorite(Class.class);
-		System.out.printf("%s %x %s%n", favoriteString, favoriteInteger,
+		System.out.printf("%s %x %s%n\n", favoriteString, favoriteInteger,
 				favoriteClass.getName());
 	}
 }

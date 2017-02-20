@@ -41,10 +41,10 @@ public class Stack<E> {
 	}
 
 	// pushAll method without wildcard type - deficient!
-	// public void pushAll(Iterable<E> src) {
-	// for (E e : src)
-	// push(e);
-	// }
+	public void pushAll1(Iterable<E> src) {
+		for (E e : src)
+			push(e);
+	}
 
 	// Wildcard type for parameter that serves as an E producer
 	public void pushAll(Iterable<? extends E> src) {
@@ -53,10 +53,10 @@ public class Stack<E> {
 	}
 
 	// popAll method without wildcard type - deficient!
-	// public void popAll(Collection<E> dst) {
-	// while (!isEmpty())
-	// dst.add(pop());
-	// }
+	public void popAll1(Collection<E> dst) {
+		while (!isEmpty())
+			dst.add(pop());
+	}
 
 	// Wildcard type for parameter that serves as an E consumer
 	public void popAll(Collection<? super E> dst) {
