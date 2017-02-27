@@ -14,4 +14,9 @@ public enum Ensemble {
 	public int numberOfMusicians() {
 		return numberOfMusicians;
 	}
+	
+	public static void main(String[] args) {
+	for (Ensemble p : Ensemble.values())
+		System.out.printf("Weight on %s\n", p);	
+	}
 }
